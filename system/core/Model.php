@@ -87,9 +87,9 @@ class CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
-	function update($id){
+	function update($id, $data){
 		$this->db->where($this->table_id, $id);
-		$this->db->update($this->table);
+		$this->db->update($this->table, $data);
 	}
 	function delete($id){
 		$this->db->where($this->table_id, $id);

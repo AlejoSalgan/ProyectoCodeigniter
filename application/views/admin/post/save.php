@@ -78,6 +78,24 @@
 
                             <div class="form-group">
                                 <?php 
+                                    echo form_label('Imagen', 'image');
+                                ?>
+                                <?php 
+                                    $text_input = array(
+                                        'name' => 'image',
+                                        'id' => 'image',
+                                        'value' => '',
+                                        'type' => 'file',
+                                        'class' => 'from-control input-lg'
+                                    );
+
+                                    echo form_input($text_input);
+                                ?>
+                                <hr>
+                            </div>
+
+                            <div class="form-group">
+                                <?php 
                                     echo form_label('Publicado', 'posted');
                                     echo form_dropdown('posted', $data_posted, null, 'class="form-control input-lg"'); 
                                 ?>
