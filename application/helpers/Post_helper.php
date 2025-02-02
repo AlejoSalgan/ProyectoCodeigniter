@@ -5,7 +5,5 @@ function posted(){
 }
 
 function clean_name($name){
-
-
     return url_title($name, '-', TRUE);
 }

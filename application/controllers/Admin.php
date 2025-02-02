@@ -61,10 +61,9 @@ class Admin extends CI_Controller{
 
         $title = clean_name($title);
 
-        // configuraciones de carga
-        $config["upload_path"] = 'uploads/post';
+        $config["upload_path"] = 'uploads/post'; //carpetas locales
         $config["file_name"] = $title;
-        $config["allowed_types"] = 'gif/png/jpg';
+        $config["allowed_types"] = 'gif|png|jpg';
         $config["max_size"] = 5000;
         $config["overwrite"] = TRUE;
 
@@ -84,6 +83,7 @@ class Admin extends CI_Controller{
         }
     }
 
+    
     function resize_image($path_image){
         $config["image_library"] = 'gd2';
         $config["source_image"] = $path_image;
