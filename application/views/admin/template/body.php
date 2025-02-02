@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/fontawesome-free/css/all.min.css">
         <!-- adminlte-->
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/admin/adminlte.min.css">
+        <!-- custom-->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/admin/custom.css">
     </head>
     <body class="hold-transition sidebar-mini pace-primary">
         <!-- Site wrapper -->
