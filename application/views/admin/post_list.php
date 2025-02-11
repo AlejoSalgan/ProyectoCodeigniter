@@ -6,8 +6,8 @@
     <title>Post_list</title>
 </head>
 <body>
-    <link rel="stylesheet" href="<?php base_url() ?>assets/css/bootstrap.min.css">
     <script src="<?php base_url()?>assets/js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="<?php base_url() ?>assets/css/bootstrap.min.css">
     <script src="<?php base_url()?>assets/js/bootstrap.min.js"></script>
 </body>
 </html>

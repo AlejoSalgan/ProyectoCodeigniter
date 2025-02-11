@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/admin/adminlte.min.css">
         <!-- custom-->
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/admin/custom.css">
+
+        <script src="<?php echo base_url() ?>assets/js/jquery-3.7.1.js"></script>
+
     </head>
     <body class="hold-transition sidebar-mini pace-primary">
         <!-- Site wrapper -->
@@ -68,7 +71,6 @@
         </div>
         <!-- ./wrapper -->
         
-        <script src="<?php echo base_url() ?>assets/js/jquery-3.7.1.js"></script>
         
         <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->

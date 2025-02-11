@@ -30,6 +30,15 @@ class Admin extends CI_Controller{
         $this->parser->parse("admin/template/body", $view);
     }
 
+    public function post_delete($post_id = null){
+        if($post_id == null){ 
+            echo 0;
+        } else {
+            // $this->Post->delete($post_id);
+            echo 1;
+        }
+    }
+
     public function post_save(){
         if($this->input->server('REQUEST_METHOD') == 'POST'){
             $this->form_validation->set_rules('title', 'Título', 'required|min_length[10]|max_length[65]');
@@ -39,11 +48,18 @@ class Admin extends CI_Controller{
 
             if($this->form_validation->run()){
                 //nuestro form es valido
+                $url_clean = $this->input->post("url_clean");
+
+                if($url_clean == ""){
+                    $url_clean = clean_name($this->input->post("title"));
+                }
+
                 $save = array(
                     'title' => $this->input->post("title"),
                     'content' => $this->input->post("content"),
                     'description' => $this->input->post("description"),
-                    'posted' => $this->input->post("posted")
+                    'posted' => $this->input->post("posted"),
+                    'url_clean' => $url_clean
                 );
 
                 $post_id = $this->Post->insert($save);
